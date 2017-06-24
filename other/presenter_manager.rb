@@ -1,6 +1,10 @@
 class PresenterManager
 
   @@increment_value = 1
+  @@TEAM_COLOURS = ["#1FC142","#5D12CE",
+    "#D0111A","#1F63C1","#C402DE","#11D0B0",
+    "#DD9F03","#588973","#C11F55","#C94418","#07ACDA"
+  ]
 
   def PresenterManager.split_teams_into_rows(teams)
     row1 = []
@@ -23,8 +27,19 @@ class PresenterManager
     return @@increment_value
   end
 
-  def change_increment_value(new_value)
+  def PresenterManager.change_increment_value(new_value)
     @@increment_value = new_value
+  end
+
+  def initialize()
+    @colour_counter = 0
+  end
+
+  def get_team_colour()
+    @colour_counter = 0 if(@colour_counter >= @@TEAM_COLOURS.length)
+    colour = @@TEAM_COLOURS[@colour_counter]
+    @colour_counter += 1
+    return colour
   end
 
 end
