@@ -15,3 +15,7 @@ teams[1] = Team.new({
 teams.each() do |team|
   team.save()
 end
+
+teams[0].name = "Fun with ice cream"
+
+teams[0].update()
