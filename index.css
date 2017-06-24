@@ -10,14 +10,14 @@ body{
 }
 
 .board_container{
-  height: 300px;
+  height: 325px;
   width: 200px;
   margin: 20px;
 }
 
 .inner_board{
   width: inherit;
-  height: calc(100% / 2);
+  height: 47.25%;
   text-align: center;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -36,7 +36,7 @@ body{
 }
 
 .upper_board form{
-  height: 5px;
+  height: 5%;
 }
 
 .lower_board{
