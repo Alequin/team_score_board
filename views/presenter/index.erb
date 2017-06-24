@@ -35,9 +35,9 @@
           <div class="inner_board upper_board">
               <p><%= team.score %></p>
           </div>
-          <form>
-            <input class="minus_score_button" type="submit" value="-">
-            <input class="plus_score_button" type="submit" value="+">
+          <form action="/team/presenter/<%= team.id %>" method="post">
+            <input class="minus_score_button" type="submit" name="edit_score" value="-">
+            <input class="plus_score_button" type="submit" name="edit_score" value="+">
           </form>
           <div class="inner_board lower_board">
             <span><%= team.name %></span>
