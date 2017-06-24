@@ -17,5 +17,8 @@ teams.each() do |team|
 end
 
 teams[0].name = "Fun with ice cream"
-
 teams[0].update()
+
+teams.each() do |team|
+  team.delete()
+end
