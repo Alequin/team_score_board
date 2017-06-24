@@ -4,6 +4,7 @@ require_relative("../other/validator.rb")
 class Team < DatabaseAssistant
 
   @@TABLE_NAME = "teams"
+  @@CLASS_NAME = "Team"
 
   attr_accessor :name
 
@@ -12,6 +13,22 @@ class Team < DatabaseAssistant
     super(options["id"], @@TABLE_NAME, "Team")
     @name = options["name"]
     @score = options["score"].to_i
+  end
+
+  def Team.delete_all()
+    DatabaseAssistant.delete_all(@@TABLE_NAME)
+  end
+
+  def Team.find_by_id(id)
+    return DatabaseAssistant.find(@@CLASS_NAME, @@TABLE_NAME, {"id" => id})
+  end
+
+  def Team.find(to_find)
+    return DatabaseAssistant.find(@@CLASS_NAME, @@TABLE_NAME, to_find)
+  end
+
+  def Team.get_all(sort_by = nil, order = nil)
+    return DatabaseAssistant.get_all(@@CLASS_NAME, @@TABLE_NAME, sort_by = nil, order = nil)
   end
 
   def save()
