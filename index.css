@@ -6,6 +6,7 @@
 .board_container{
   height: 300px;
   width: 200px;
+  margin: 20px;
 }
 
 .inner_board{
@@ -39,4 +40,9 @@
   background: radial-gradient(300px circle at 50% 50%, #FF3232, black);
   color: white;
   border-bottom: 1px solid black;
+}
+
+section{
+  display: flex;
+  justify-content: center;
 }
