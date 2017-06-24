@@ -1,9 +1,9 @@
 class PresenterManager
 
-  def PresenterManager.divide_teams_into_rows(teams)
+  def PresenterManager.split_teams_into_rows(teams)
     row1 = []
     row2 = []
-    
+
     teams.each_with_index() do |team, index|
       row1.push(team) if(index.even?())
       row2.push(team) if(index.odd?())
