@@ -9,3 +9,7 @@ get("/team") do
   @teams = PresenterManager.split_teams_into_rows(@teams)
   erb(:"presenter/index")
 end
+
+post("/team/:id") do
+  
+end
