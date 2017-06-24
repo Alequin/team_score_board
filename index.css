@@ -32,6 +32,6 @@ body{
   border-top: 5px solid grey;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  background: #FF3232;
+  background: radial-gradient(300px circle at 50% 50%, #FF3232, black);
   color: white;
 }
