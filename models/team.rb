@@ -5,6 +5,8 @@ class Team < DatabaseAssistant
 
   @@TABLE_NAME = "teams"
 
+  attr_accessor :name
+
   def initialize(options)
     options = fill_empty_attributes(options)
     super(options["id"], @@TABLE_NAME, "Team")
