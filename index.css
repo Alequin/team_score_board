@@ -1,7 +1,7 @@
-body{
+/*body{
   padding: 0;
   margin: 0;
-}
+}*/
 
 .board_container{
   height: 300px;
@@ -12,7 +12,7 @@ body{
   width: inherit;
   height: calc(100% / 2);
   text-align: center;
-  border: 5px solid #FF3232;
+  border: 1px solid black;
   line-height: 140px;
 }
 
@@ -34,6 +34,6 @@ body{
   font-weight: 600;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  background: #FF3232;
+  background: radial-gradient(300px circle at 50% 50%, #FF3232, black);
   color: white;
 }
