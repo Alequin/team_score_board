@@ -8,7 +8,7 @@ class DatabaseAssistant
     sql_command = "SELECT * FROM #{table_name}"
     sql_command += " ORDER BY #{sort_by} #{order}" if(sort_by && order)
     return SqlRunner.run(sql_command)
-    # return results.map {|hash| Module.const_get(class_name).new(hash)}
+    return results.map {|hash| Module.const_get(class_name).new(hash)}
   end
 
   def DatabaseAssistant.delete_all(table_name)
