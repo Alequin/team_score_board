@@ -20,7 +20,10 @@
             <input class="minus_score_button" type="submit" name="edit_score" value="-">
             <input class="plus_score_button" type="submit" name="edit_score" value="+">
           </form>
-          <div class="inner_board lower_board">
+          <% team_colour = @presenter_colours.get_team_colour%>
+          <div
+            class="inner_board lower_board"
+            style="background: radial-gradient(300px circle at 50% 50%, <%= team_colour %>, black);">
             <span><%= team.name %></span>
           </div>
         </div>
@@ -39,7 +42,10 @@
             <input class="minus_score_button" type="submit" name="edit_score" value="-">
             <input class="plus_score_button" type="submit" name="edit_score" value="+">
           </form>
-          <div class="inner_board lower_board">
+          <% team_colour = @presenter_colours.get_team_colour()%>
+          <div
+            class="inner_board lower_board"
+            style="background: radial-gradient(300px circle at 50% 50%, <%= team_colour %>, black);">
             <span><%= team.name %></span>
           </div>
         </div>

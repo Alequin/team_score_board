@@ -5,6 +5,7 @@ require_relative("../other/presenter_manager.rb")
 require_relative("../models/team.rb")
 
 get("/team") do
+  @presenter_colours = PresenterManager.new()
   @teams = Team.get_all("id", "ASC")
   @teams = PresenterManager.split_teams_into_rows(@teams)
   erb(:"presenter/index")
