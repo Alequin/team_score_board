@@ -1,35 +1,35 @@
 require ("minitest/autorun")
 require ("minitest/rg")
-require_relative ("../../db/database_assistant.rb")
+require_relative ("../../database/database_assistant.rb")
 
 class TestDatabaseAssistant < MiniTest::Test
 
   def setup
-    @assistant = DatabaseAssistant.new(0, "table")
+    @assistant_nil_child = DatabaseAssistant.new(0, "table", nil)
   end
 
   def test_build_column_string()
     columns = ["name", "age", "height", "hair_colour"]
     expected = "name, age, height, hair_colour"
-    result = @assistant.send(:build_column_string, columns)
+    result = @assistant_nil_child.send(:build_column_string, columns)
     assert_equal(expected, result)
   end
 
   def test_build_placeholder_string()
     columns = ["name", "age", "height", "hair_colour"]
     expected = "$1, $2, $3, $4"
-    result = @assistant.send(:build_placeholder_string, columns)
+    result = @assistant_nil_child.send(:build_placeholder_string, columns)
     assert_equal(expected, result)
   end
 
   def test_build_query_peices()
     input1 = ["name", "age", "height", "hair_colour"]
-    result1 = @assistant.send(:build_query_peices, input1)
+    result1 = @assistant_nil_child.send(:build_query_peices, input1)
     expected1 = "name, age, height, hair_colour"
     assert_equal(expected1, result1)
 
     input2 = ["$1", "$2", "$3", "$4"]
-    result2 = @assistant.send(:build_query_peices, input2)
+    result2 = @assistant_nil_child.send(:build_query_peices, input2)
     expected2 = "$1, $2, $3, $4"
     assert_equal(expected2, result2)
   end
@@ -41,7 +41,7 @@ class TestDatabaseAssistant < MiniTest::Test
       "height" => 170,
       "hair_colour" => "red"
     }
-    result = @assistant.send(:prepare_columns_and_values, to_insert)
+    result = @assistant_nil_child.send(:prepare_columns_and_values, to_insert)
     expected = {
       columns: "name, age, height, hair_colour",
       values: "$1, $2, $3, $4"
