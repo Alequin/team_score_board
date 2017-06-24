@@ -4,11 +4,10 @@ class DatabaseAssistant
 
   attr_reader :id
 
-  def DatabaseAssistant.get_all(table_name, class_name, sort_by = nil, order = nil)
+  def DatabaseAssistant.get_all(table_name, sort_by = nil, order = nil)
     sql_command = "SELECT * FROM #{table_name}"
     sql_command += " ORDER BY #{sort_by} #{order}" if(sort_by && order)
-    return SqlRunner.run(sql_command)
-    return results.map {|hash| Module.const_get(class_name).new(hash)}
+    return results.map {|hash| Module.const_get(@child_class_name).new(hash)}
   end
 
   def DatabaseAssistant.delete_all(table_name)
@@ -19,8 +18,8 @@ class DatabaseAssistant
   def DatabaseAssistant.find(table_name, values_to_search)
     where_clause = DatabaseAssistant.build_where_clause(values_to_search)
     sql_command = "SELECT * FROM #{table_name} #{where_clause}"
-    result = SqlRunner.run(sql_command, values_to_search.values)
-    return result
+    results = SqlRunner.run(sql_command, values_to_search.values)
+    return results.map {|hash| Module.const_get(@child_class_name).new(hash)}
   end
 
   def DatabaseAssistant.build_where_clause(values)
@@ -33,9 +32,10 @@ class DatabaseAssistant
     return result[0..-6]
   end
 
-  def initialize(id, table_name)
+  def initialize(id, table_name, child_class_name)
     @id = id.to_i if id
     @table_name = table_name
+    @child_class_name
   end
 
   def delete()
