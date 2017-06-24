@@ -1,4 +1,5 @@
 require_relative("../database/databaseassistant.rb")
+require_relative("../other/validator.rb")
 
 class Team
 
