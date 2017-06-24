@@ -40,6 +40,14 @@ class Team < DatabaseAssistant
     super(get_table_hash)
   end
 
+  def increase_score(amount)
+    @score += amount
+  end
+
+  def decrease_score(amount)
+    @score -= amount
+  end
+
   private
 
   def fill_empty_attributes(options)
