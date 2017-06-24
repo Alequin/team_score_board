@@ -6,6 +6,6 @@ require_relative("../models/team.rb")
 
 get("/team") do
   @teams = Team.get_all()
-  @teams =
+  @teams = PresenterManager.split_teams_into_rows(@teams)
   erb(:"presenter/index")
 end
