@@ -8,5 +8,49 @@
   </head>
   <body>
 
+    <section>
+
+      <% @teams[:row1].each() do |team| %>
+        <div class="board_container">
+          <div class="inner_board upper_board">
+              <p><%= team.score %></p>
+          </div>
+          <form>
+            <input class="minus_score_button" type="submit" value="-">
+            <input class="plus_score_button" type="submit" value="+">
+          </form>
+          <div class="inner_board lower_board">
+            <span><%= team.name %></span>
+          </div>
+        </div>
+      <% end %>
+
+    </section>
+
+    <section>
+
+      <% @teams[:row2].each() do |team| %>
+        <div class="board_container">
+          <div class="inner_board upper_board">
+              <p><%= team.score %></p>
+          </div>
+          <form>
+            <input class="minus_score_button" type="submit" value="-">
+            <input class="plus_score_button" type="submit" value="+">
+          </form>
+          <div class="inner_board lower_board">
+            <span><%= team.name %></span>
+          </div>
+        </div>
+      <% end %>
+
+    </section>
+
+    <footer>
+      <ul>
+        <li>Control Panel</li>
+      </ul>
+    </footer>
+
   </body>
 </html>
