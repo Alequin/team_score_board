@@ -1,22 +1,36 @@
 
 #team_container{
-  width: 280px;
+  width: 640px;
   height: 700px;
   margin: auto;
-  border: 1px solid black;
   padding: 15px;
+}
+
+#team_container li{
+  width: 210px;
+  float: left;
+  margin-right: 40px;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+#team_container p{
+  font-size: 17px;
 }
 
 #team_container ol{
   padding-left: 15px;
+  list-style: none;
 }
 
 #team_container label{
+  font-size: 17px;
 }
 
 #team_container input{
   display: block;
   margin: 10px 0 10px 0;
+  font-size: 15px;
 }
 
 #team_container input[type="text"]{
