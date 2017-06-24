@@ -29,7 +29,7 @@ class Team < DatabaseAssistant
   end
 
   def Team.get_all(sort_by = nil, order = nil)
-    return DatabaseAssistant.get_all(@@CLASS_NAME, @@TABLE_NAME, sort_by = nil, order = nil)
+    return DatabaseAssistant.get_all(@@CLASS_NAME, @@TABLE_NAME, sort_by, order)
   end
 
   def save()
