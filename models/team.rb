@@ -21,7 +21,7 @@ class Team < DatabaseAssistant
   end
 
   def Team.find_by_id(id)
-    return DatabaseAssistant.find(@@CLASS_NAME, @@TABLE_NAME, {"id" => id})
+    return DatabaseAssistant.find(@@CLASS_NAME, @@TABLE_NAME, {"id" => id}).first()
   end
 
   def Team.find(to_find)
