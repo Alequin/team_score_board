@@ -36,6 +36,26 @@ teams[5] = Team.new({
   "score" => 10
 })
 
+teams[6] = Team.new({
+  "name" => "Onion Eaters",
+  "score" => 10
+})
+
+teams[7] = Team.new({
+  "name" => "Onion Eaters",
+  "score" => 10
+})
+
+teams[8] = Team.new({
+  "name" => "Onion Eaters",
+  "score" => 10
+})
+
+teams[9] = Team.new({
+  "name" => "Onion Eaters",
+  "score" => 10
+})
+
 teams.each() do |team|
   team.save()
 end
