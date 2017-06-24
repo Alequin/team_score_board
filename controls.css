@@ -1,0 +1,29 @@
+
+#team_container{
+  width: 280px;
+  height: 700px;
+  margin: auto;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+#team_container ol{
+  padding-left: 15px;
+}
+
+#team_container label{
+}
+
+#team_container input{
+  display: block;
+  margin: 10px 0 10px 0;
+}
+
+#team_container input[type="text"]{
+  width: 90%;
+}
+
+#team_container input[type=number]{
+  width: 40px;
+  padding-left: 15px;
+}
