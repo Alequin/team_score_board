@@ -2,7 +2,7 @@ require ("minitest/autorun")
 require ("minitest/rg")
 require_relative ("../../other/validator.rb")
 
-class TestDatabaseAssistant < MiniTest::Test
+class TestValidator < MiniTest::Test
 
   def test_empty_input__string__true()
     assert(Validator.input_empty?(""))
