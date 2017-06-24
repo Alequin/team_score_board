@@ -1,4 +1,8 @@
+require("pry-byebug")
+
 require_relative("../../models/team.rb")
+
+Team.delete_all()
 
 teams = []
 
@@ -19,6 +23,9 @@ end
 teams[0].name = "Fun with ice cream"
 teams[0].update()
 
-teams.each() do |team|
-  team.delete()
-end
+# teams.each() do |team|
+#   team.delete()
+# end
+
+binding.pry
+nil
