@@ -10,14 +10,14 @@ body{
 }
 
 .board_container{
-  height: 325px;
+  height: 350px;
   width: 200px;
   margin: 20px;
 }
 
 .inner_board{
   width: inherit;
-  height: 47.25%;
+  height: 157px;
   text-align: center;
   border-left: 1px solid black;
   border-right: 1px solid black;
