@@ -1,13 +1,13 @@
 
 #team_container{
   width: 951px;
-  height: 700px;
   margin: auto;
   padding: 15px;
 }
 
 #team_container li{
   width: 210px;
+  height: 200px;
   float: left;
   margin-right: 40px;
   border: 1px solid black;
@@ -38,6 +38,11 @@
 }
 
 #team_container input[type=number]{
-  width: 40px;
+  width: 60px;
   padding-left: 15px;
+}
+
+#control_panel_white_space{
+  clear: both;
+  height: 60px;
 }

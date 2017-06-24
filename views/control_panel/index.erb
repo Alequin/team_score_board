@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/footer.css">
   </head>
   <body>
-    <div id="main_container">
+    <div id="controls_main_container">
       <section id="team_container">
         <ol>
 
@@ -16,12 +16,10 @@
 
             <li>
               <article>
-                <p><%= team.name %></p>
-                <p>Points: <%= team.score %></p>
                 <form action="/panel/<%= team.id %>">
-                  <label>Team Name</label>
+                  <label>Team Name: <%= team.name %></label>
                   <input type="Text" value="<%= team.name %>">
-                  <label>Points</label>
+                  <label>Points: <%= team.score %></label>
                   <input type="number" value="<%= team.score %>">
                   <input type="submit" value="Update">
                 </form>
@@ -32,13 +30,16 @@
 
         </ol>
       </section>
+      <div id="control_panel_white_space">
 
-      <footer>
-        <ul>
-          <li>Game Page</li>
-        </ul>
-      </footer>
-
+      </div>
     </div>
+
+    <footer>
+      <ul>
+        <li>Game Page</li>
+      </ul>
+    </footer>
+
   </body>
 </html>
