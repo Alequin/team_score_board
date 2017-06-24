@@ -1,8 +1,8 @@
 body{
-  background-image: url(backgrounds/blue_circle_lights.jpg);
-  /*background-image: url(backgrounds/Creased-White-Paper.jpg);*/
-  /*background-image: url(backgrounds/codeclan_logo_blur.png);*/
-  /*background-image: url(backgrounds/codeclan-logo_blur.png);*/
+  background-image: url(/images/blue_circle_lights.jpg);
+  /*background-image: url(/images/Creased-White-Paper.jpg);*/
+  /*background-image: url(/images/codeclan_logo_blur.png);*/
+  /*background-image: url(/images/codeclan-logo_blur.png);*/
   background-image: no-repeat;
   background-size: cover;
 }
