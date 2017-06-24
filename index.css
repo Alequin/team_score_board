@@ -12,7 +12,8 @@
   width: inherit;
   height: calc(100% / 2);
   text-align: center;
-  border: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   line-height: 140px;
 }
 
@@ -27,6 +28,7 @@
   font-size: 70px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+  border-top: 1px solid black;
 }
 
 .lower_board{
@@ -36,4 +38,5 @@
   border-bottom-left-radius: 30px;
   background: radial-gradient(300px circle at 50% 50%, #FF3232, black);
   color: white;
+  border-bottom: 1px solid black;
 }
