@@ -1,6 +1,6 @@
 class PresenterManager
 
-  @@INCREMENT_VALUE = 1
+  @@increment_value = 1
 
   def PresenterManager.split_teams_into_rows(teams)
     row1 = []
@@ -16,7 +16,11 @@ class PresenterManager
   end
 
   def PresenterManager.increment_value()
-    return @@INCREMENT_VALUE
+    return @@increment_value
+  end
+
+  def change_increment_value(new_value)
+    @@increment_value = new_value
   end
 
 end
