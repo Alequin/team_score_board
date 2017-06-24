@@ -6,6 +6,7 @@ class Team < DatabaseAssistant
   @@TABLE_NAME = "teams"
   @@CLASS_NAME = "Team"
 
+  attr_reader :score
   attr_accessor :name
 
   def initialize(options)
