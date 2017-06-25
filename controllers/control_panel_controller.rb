@@ -8,6 +8,12 @@ get("/panel") do
   erb(:"control_panel/index")
 end
 
+post("/panel") do
+  team = Team.new(params)
+  team.save()
+  redirect to("/panel")
+end
+
 post("/panel/:id") do
   team = Team.new(params)
   team.update
