@@ -34,10 +34,14 @@
   font-size: 17px;
 }
 
+#new_team_container input,
+.team_containers input{
+  font-size: 15px;
+}
+
 .team_containers input{
   display: block;
   margin: 10px 0 10px 0;
-  font-size: 15px;
 }
 
 #team_container input[type="text"]{
