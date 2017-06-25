@@ -11,7 +11,8 @@
 
     <div id="settings_container">
       <section>
-        <form action="index.html" method="post">
+        <form action="/panel/settings" method="post">
+          <p>Current point change value: <%= @point_change_value %></p>
           <label>On press of '+' or '-' change points by:</label>
           <input type="number" name="point_edit_value" value="">
           <input type="submit" name="" value="Submit">

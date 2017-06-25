@@ -1,6 +1,7 @@
 require("sinatra")
 require("sinatra/contrib/all")
 
+require_relative("../other/presenter_manager.rb")
 require_relative("../models/team.rb")
 
 get("/panel/team") do
@@ -9,6 +10,7 @@ get("/panel/team") do
 end
 
 get("/panel/settings") do
+  @point_change_value = PresenterManager.increment_value
   erb(:"control_panel/settings/index")
 end
 
@@ -16,6 +18,12 @@ post("/panel/team") do
   team = Team.new(params)
   team.save()
   redirect to("/panel/team")
+end
+
+post("/panel/settings") do
+  new_value = params["point_edit_value"].to_i
+  PresenterManager.change_increment_value(new_value)
+  redirect to("/panel/settings")
 end
 
 post("/panel/team/:id") do
