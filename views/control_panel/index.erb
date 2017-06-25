@@ -14,7 +14,7 @@
 
           <% @teams.each() do |team| %>
 
-            <li>
+            <li class="team_containers">
               <article>
                 <form action="/panel/<%= team.id %>">
                   <label>Team Name: <%= team.name %></label>
@@ -27,6 +27,17 @@
             </li>
 
           <% end %>
+
+          <li id="new_team_container">
+            <article>
+              <p><b>Create New Team</b></p>
+              <form>
+                <label>Team Name</label>
+                <input type="Text" value="The Team of winners who are awesome at winning and not loosing">
+                <input type="submit" value="Create">
+              </form>
+            </article>
+          </li>
 
         </ol>
       </section>
