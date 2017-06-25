@@ -19,3 +19,9 @@ post("/panel/:id") do
   team.update
   redirect to("/panel")
 end
+
+post("/panel/:id/delete") do
+  team = Team.find_by_id(params["id"])
+  team.delete if(params["delete_check"])
+  redirect to("/panel")
+end
