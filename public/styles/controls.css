@@ -34,7 +34,7 @@
   font-size: 17px;
 }
 
-#team_container input{
+.team_containers input{
   display: block;
   margin: 10px 0 10px 0;
   font-size: 15px;
@@ -47,6 +47,10 @@
 #team_container input[type=number]{
   width: 60px;
   padding-left: 15px;
+}
+
+.team_delete_form input{
+  display: inline-block;
 }
 
 #control_panel_white_space{
