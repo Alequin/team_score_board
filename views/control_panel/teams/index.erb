@@ -16,14 +16,14 @@
 
             <li class="team_containers">
               <article>
-                <form action="/panel/<%= team.id %>" method="post">
+                <form action="/panel/team/<%= team.id %>" method="post">
                   <label>Team Name: <%= team.name %></label>
                   <input type="Text" name="name" value="<%= team.name %>">
                   <label>Points: <%= team.score %></label>
                   <input type="number" name="score" value="<%= team.score %>">
                   <input type="submit" value="Update">
                 </form>
-                <form class="team_delete_form" action="/panel/<%= team.id %>/delete" method="post">
+                <form class="team_delete_form" action="/panel/team/<%= team.id %>/delete" method="post">
                   <input type="checkbox" name="delete_check">
                   <input type="submit" value="Delete">
                 </form>
@@ -35,7 +35,7 @@
           <li id="new_team_container">
             <article>
               <p><b>Create New Team</b></p>
-              <form action="/panel" method="post">
+              <form action="/panel/team" method="post">
                 <label>Team Name</label>
                 <input
                   type="Text" name="name">
