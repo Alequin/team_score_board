@@ -10,8 +10,11 @@
   height: 200px;
   float: left;
   margin-right: 40px;
-  border: 1px solid black;
   padding: 30px;
+}
+
+.team_containers{
+  border: 1px solid black;
 }
 
 #team_container p{
@@ -45,4 +48,8 @@
 #control_panel_white_space{
   clear: both;
   height: 60px;
+}
+
+#new_team_container{
+  border: 1px solid blue;
 }
