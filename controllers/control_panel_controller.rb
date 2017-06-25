@@ -9,7 +9,7 @@ get("/panel/team") do
 end
 
 get("/panel/settings") do
-
+  erb(:"control_panel/settings/index")
 end
 
 post("/panel/team") do
