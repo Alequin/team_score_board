@@ -23,7 +23,7 @@
                   <input type="number" name="score" value="<%= team.score %>">
                   <input type="submit" value="Update">
                 </form>
-                <form action="/panel/<%= team.id %>/delete" method="post">
+                <form class="team_delete_form" action="/panel/<%= team.id %>/delete" method="post">
                   <input type="checkbox" name="delete_check">
                   <input type="submit" value="Delete">
                 </form>
