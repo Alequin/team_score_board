@@ -1,20 +1,24 @@
 
 #team_container{
-  width: 951px;
+  width: 1000px;
   margin: auto;
   padding: 15px;
 }
 
 #team_container li{
-  width: 210px;
+  width: 260px;
   height: 200px;
   float: left;
-  margin-right: 40px;
+  margin: 2px 2px 2px 2px;
   padding: 30px;
 }
 
 .team_containers{
-  border: 1px solid black;
+  border: 2px solid black;
+}
+
+#new_team_container{
+  border: 2px solid green;
 }
 
 #team_container p{
@@ -48,8 +52,4 @@
 #control_panel_white_space{
   clear: both;
   height: 60px;
-}
-
-#new_team_container{
-  border: 1px solid blue;
 }
