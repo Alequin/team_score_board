@@ -9,5 +9,7 @@ get("/panel") do
 end
 
 post("/panel/:id") do
-  
+  team = Team.new(params)
+  team.update
+  redirect to("/panel")
 end
